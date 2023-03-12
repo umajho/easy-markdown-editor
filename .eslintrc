@@ -21,7 +21,11 @@
         "node": true
     },
     "parserOptions": {
+        "sourceType": "module",
         "ecmaVersion": 2018
     },
-    "extends": "eslint:recommended"
+    "extends": "eslint:recommended",
+    "ignorePatterns": [
+        "**/*.scss" // reported `Unexpected character '@'` for scss files
+    ]
 }

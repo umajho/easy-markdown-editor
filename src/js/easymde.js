@@ -1,19 +1,19 @@
-'use strict';
-var CodeMirror = require('codemirror');
-require('codemirror/addon/edit/continuelist.js');
-require('./codemirror/tablist');
-require('codemirror/addon/display/fullscreen.js');
-require('codemirror/mode/markdown/markdown.js');
-require('codemirror/addon/mode/overlay.js');
-require('codemirror/addon/display/placeholder.js');
-require('codemirror/addon/display/autorefresh.js');
-require('codemirror/addon/selection/mark-selection.js');
-require('codemirror/addon/search/searchcursor.js');
-require('codemirror/mode/gfm/gfm.js');
-require('codemirror/mode/xml/xml.js');
-var CodeMirrorSpellChecker = require('codemirror-spell-checker');
-var marked = require('marked').marked;
+import '../css/easymde.scss';
 
+import CodeMirror from 'codemirror';
+import 'codemirror/addon/edit/continuelist.js';
+import './codemirror/tablist';
+import 'codemirror/addon/display/fullscreen.js';
+import 'codemirror/mode/markdown/markdown.js';
+import 'codemirror/addon/mode/overlay.js';
+import 'codemirror/addon/display/placeholder.js';
+import 'codemirror/addon/display/autorefresh.js';
+import 'codemirror/addon/selection/mark-selection.js';
+import 'codemirror/addon/search/searchcursor.js';
+import 'codemirror/mode/gfm/gfm.js';
+import 'codemirror/mode/xml/xml.js';
+import CodeMirrorSpellChecker from 'codemirror-spell-checker';
+import { marked } from 'marked';
 
 // Some variables
 var isMac = /Mac/.test(navigator.platform);
@@ -1730,7 +1730,7 @@ var errorMessages = {
 /**
  * Interface of EasyMDE.
  */
-function EasyMDE(options) {
+export default function EasyMDE(options) {
     // Handle options parameter
     options = options || {};
 
@@ -3045,5 +3045,3 @@ EasyMDE.prototype.toTextArea = function () {
         this.clearAutosavedValue();
     }
 };
-
-module.exports = EasyMDE;
