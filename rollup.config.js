@@ -1,4 +1,4 @@
-// import typescript from '@rollup/plugin-typescript';
+import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 import eslint from '@rollup/plugin-eslint';
 import scss from 'rollup-plugin-scss';
@@ -26,7 +26,7 @@ export default {
     },
     plugins: [
         eslint({ throwOnError: true }),
-        // typescript(), // TODO: typescriptify
+        typescript(),
         terser(),
         scss({
             fileName: 'easymde.min.css',

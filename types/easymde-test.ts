@@ -1,5 +1,5 @@
 // Create new instance
-import EasyMDE = require('./easymde');
+import * as EasyMDE from './easymde';
 
 const editor = new EasyMDE({
     autoDownloadFontAwesome: false,
@@ -30,7 +30,8 @@ const fullscreen = editor.isFullscreenActive() as boolean;
 editor.codemirror.setOption('readOnly', true);
 
 // Static properties
-EasyMDE.toggleItalic = (editor: EasyMDE) => {
+let toggleItalic = EasyMDE.toggleItalic;
+toggleItalic = (editor: EasyMDE) => {
     console.log('SomeButtonOverride');
 };
 

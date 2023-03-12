@@ -27,5 +27,7 @@
     "extends": "eslint:recommended",
     "ignorePatterns": [
         "**/*.scss" // reported `Unexpected character '@'` for scss files
-    ]
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"]
 }
